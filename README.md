@@ -3,5 +3,7 @@ A go docker image based on the official golang one with extras to build go proje
 
 It includes:
 
-- git
+- bash
 - gcc
+- git
+- libc-dev
