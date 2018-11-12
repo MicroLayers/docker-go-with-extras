@@ -1,3 +1,4 @@
 FROM golang:{VERSION}
 
-RUN apk add --no-cache git gcc
+RUN apk add --no-cache git gcc libc-dev
+
