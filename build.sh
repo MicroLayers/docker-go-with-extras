@@ -20,7 +20,7 @@ processResult() {
   sed "s/{VERSION}/$version/" Dockerfile.template.yml > $dockerfileName
 
   docker build -f $dockerfileName -t microlayers/golang-with-extras:$version .
-  docker push microlayers/go-with-extras:$version
+  docker push microlayers/golang-with-extras:$version
   rm $dockerfileName
 
   return 0
