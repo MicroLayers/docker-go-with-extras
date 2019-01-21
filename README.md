@@ -10,3 +10,4 @@ It includes:
 - gcc
 - git
 - libc-dev
+- gometalinter
