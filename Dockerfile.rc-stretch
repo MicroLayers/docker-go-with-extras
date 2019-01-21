@@ -1,4 +1,4 @@
-FROM golang:{VERSION}
+FROM golang:rc-stretch
 
 # Install extra packages + gometalinter
 RUN apt-get update && \
