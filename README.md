@@ -2,7 +2,7 @@
 
 A go docker image based on the official golang one with extras to build go projects.
 
-Based on both **Alpine** and **Debian Stretch** base images.
+Based on both **Alpine**, **Debian Stretch** and **Debian Buster** base images.
 
 It includes:
 

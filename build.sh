@@ -8,7 +8,7 @@ baseUrl="https://registry.hub.docker.com/v2/repositories/library/golang/tags/?pa
 processResult() {
   local result=$1
 
-  version=$(echo "$result" | grep -P '(\-alpine|\-stretch)' | sed -e 's/"//g')
+  version=$(echo "$result" | grep -P '(\-alpine|\-stretch|\-buster)' | sed -e 's/"//g')
 
   if [ "$version" == "" ]; then
     return 0
@@ -16,7 +16,7 @@ processResult() {
 
   echo "Processing version: $version"
 
-  templateKind=$(echo "$version" | grep -Po "(alpine|stretch)")
+  templateKind=$(echo "$version" | grep -Po "(alpine|stretch|buster)")
   templateFileName="Dockerfile.template.$templateKind"
   dockerfileName="Dockerfile.$version"
   sed "s/{VERSION}/$version/" "Dockerfile.template.$templateKind" > "$dockerfileName"
